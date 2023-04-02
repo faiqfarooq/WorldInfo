@@ -4,11 +4,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import DetailedCountryPage from "./pages/DetailedCountryPage";
 import Home from "./pages/Home";
 import Nopage from "./pages/Nopage";
 import NorthIcon from '@mui/icons-material/North';
 import ScrollToTop from "react-scroll-to-top";
+import DetailedCountryPage from "./pages/DetailedCountryPage";
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 

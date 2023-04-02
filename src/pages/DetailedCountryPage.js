@@ -13,8 +13,6 @@ import { useTranslation } from "react-i18next";
 import { getBorderAsync, getSingleCountryAsync } from "../redux/actions/Action";
 import Layout from "../components/countryDetails/Layout";
 import IsLoadingComp from "../components/IsLoadingComp";
-import { error } from "../redux/reducers/Reducer";
-import IsErrorComp from "../components/IsErrorComp";
 
 function DetailedCountryPage() {
   const { t } = useTranslation();
@@ -22,7 +20,6 @@ function DetailedCountryPage() {
   const countryBorder = useSelector(countriesBorder);
   const borders = useSelector(singleCountryborders);
   const isLoading = useSelector(loading);
-  const isError = useState(error);
   const dispatch = useDispatch();
   const params = useParams();
   const { details } = params;
@@ -64,9 +61,8 @@ function DetailedCountryPage() {
         </Link>
         {/* Back button code ends */}
         {isLoading && <IsLoadingComp />}
-        {isError && <IsErrorComp />}
         {/* Single country details page code starts */}
-        {!isLoading && !isError && (
+        {!isLoading && (
           <Box
             display="flex"
             pt="5rem"
@@ -157,5 +153,4 @@ function DetailedCountryPage() {
     </React.Fragment>
   );
 }
-
 export default DetailedCountryPage;
