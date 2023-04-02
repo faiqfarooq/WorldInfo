@@ -1,0 +1,25 @@
+{
+  "Whereintheworld": "Where in the world?",
+  "DarkMode": "Dark Mode",
+  "LightMode": "Light Mode",
+  "Searchforacountry": "Search for a country",
+  "Filterbyregions": "Filter by Regions",
+  "Back":"Back",
+  "NotFound":"Data not Found",
+  "CustomCard": {
+    "Population": "Population",
+    "Region": "Region",
+    "Capital": "Capital"
+  },
+  "CountryDetails": {
+    "NativeName": "Native Name",
+    "Population": "Population",
+    "Region": "Region",
+    "SubRegion": "Sub Region",
+    "Capital": "Capital",
+    "TopLevelDomain": "Top Level Domain",
+    "Currencies": "Currencies",
+    "Languages": "Languages",
+    "BorderCountries": "Border Countries"
+  }
+}

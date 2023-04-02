@@ -1,0 +1,25 @@
+{
+  "Whereintheworld": "세상에 어디?",
+  "DarkMode": "다크 모드",
+  "LightMode": "라이트 모드",
+  "Searchforacountry": "국가 검색",
+  "Filterbyregions": "지역별로 필터링",
+  "Back": "뒤쪽에",
+  "NotFound":"데이터를 찾을 수 없음",
+  "CustomCard": {
+    "Population": "인구",
+    "Region": "지역",
+    "Capital": "수도"
+  },
+  "CountryDetails": {
+    "NativeName": "네이티브 이름",
+    "Population": "인구",
+    "Region": "지역",
+    "SubRegion": "하위 지역",
+    "Capital": "수도",
+    "TopLevelDomain": "최상위 도메인",
+    "Currencies": "통화",
+    "Languages": "언어",
+    "BorderCountries": "국경 국가"
+  }
+}

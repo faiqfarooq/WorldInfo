@@ -1,0 +1,25 @@
+{
+  "Whereintheworld": "Donde en el mundo?",
+  "DarkMode": "Modo oscuro",
+  "LightMode": "Modo de luz",
+  "Searchforacountry": "Buscar un país",
+  "Filterbyregions": "Filtrar por Regiones",
+  "Back": "Atrás",
+  "NotFound":"Datos no encontrados",
+  "CustomCard": {
+    "Population": "Población",
+    "Region": "Región",
+    "Capital": "Capital"
+  },
+  "CountryDetails": {
+    "NativeName": "Nombre nativo",
+    "Population": "Población",
+    "Region": "Región",
+    "SubRegion": "subregión",
+    "Capital": "Capital",
+    "TopLevelDomain": "Dominio de nivel superior",
+    "Currencies": "Monedas",
+    "Languages": "Idiomas",
+    "BorderCountries": "Países vecinos"
+  }
+}
