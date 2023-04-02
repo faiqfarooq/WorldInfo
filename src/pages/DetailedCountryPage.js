@@ -1,5 +1,5 @@
 import { Box, Button, Container, CssBaseline, Typography } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import {
@@ -44,7 +44,7 @@ function DetailedCountryPage() {
       <Container
         disableGutters
         maxWidth="xl"
-        sx={{ px: { xs: "1rem", sm: "2rem", md: "3rem" }, py: "3rem" }}
+        sx={{ px: { xs: "1rem", sm: "2rem", md: "3rem" }, py: {xs:"1.8rem",sm:"3rem"} }}
       >
         {/* Back button code starts */}
         <Link to="/" style={{ textDecoration: "none" }}>
@@ -65,15 +65,15 @@ function DetailedCountryPage() {
         {!isLoading && (
           <Box
             display="flex"
-            pt="5rem"
+          
             pb="2rem"
-            sx={{ flexDirection: { md: "row", xs: "column" } }}
+            sx={{ flexDirection: { md: "row", xs: "column" },  pt:{xs:"3rem",sm:"4rem",md:"5rem"} }}
           >
             {/* Image box contain the image */}
+            
             <Box
               sx={{
                 flex: "0 0 45%",
-                height: "100%",
                 width: "100%",
                 display: "flex",
                 justifyContent: {
@@ -84,22 +84,23 @@ function DetailedCountryPage() {
                 alignItems: "center",
               }}
             >
-              <Box>
-                <Box
+          
+              <Box
                   component="img"
                   alt={name}
                   loading="lazy"
                   src={`${flag}`}
                   sx={{
-                    height: { xs: "100%", sm: "25rem", md: "28rem" },
+                    height: { xs: "auto", sm: "25rem", md: "25rem" },
                     width: "100%",
+                    objectFit:{xs:'cover',sm:"cover"}
                   }}
-                />
-              </Box>
+                />       
+              
             </Box>
             {/* Box contain the details of single country  */}
-            <Box sx={{ flex: "0 0 55%", pl: { md: "5rem", xs: "0" } }}>
-              <Typography variant="h3" sx={{ py: "2.5rem" }}>
+            <Box sx={{ flex: "0 0 55%" }}>
+              <Typography variant="h3" sx={{ pt: "2.5rem",pl:{xs:'0',sm:'0',md:'4.5rem'} }}>
                 {name}
               </Typography>
               {/* code of the all details of single country (name,currencies etc.) is in the Layout component */}
@@ -110,7 +111,8 @@ function DetailedCountryPage() {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "flex-end",
-                  pt: "5rem",
+                  pt: {xs:"2rem",sm:"4rem"},
+                  pl:{xs:'0',sm:'0',md:'4.5rem'}
                 }}
               >
                 <Typography variant="body1">

@@ -82,7 +82,7 @@ function App() {
               />
               <Route path="/*" element={<Nopage />} />
             </Routes>
-            <ScrollToTop smooth component={<NorthIcon />} />
+            <ScrollToTop smooth top={100} component={<NorthIcon />} />
             <Footer />
           </BrowserRouter>
         </Suspense>
