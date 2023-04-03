@@ -56,7 +56,7 @@ function CustomCard(props) {
               {t("CustomCard.Population")}:
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              {/* this function helps to add commons in the population */}
+              {/* this function helps to add commas in the population */}
               {addCommonsTothePopulation(props.population)}
             </Typography>
           </Box>

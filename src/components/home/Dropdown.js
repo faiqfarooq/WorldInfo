@@ -13,7 +13,7 @@ function Dropdown() {
   const handleSubcontinet = (event) => {
     setGroup(event.target.value);
   };
-  // this code will get the data related to the select option
+  // this code will get the data related to the region selection dropdown
   useEffect(() => {
     if (group !== "") dispatch(getCountryAsync({ group }));
   }, [dispatch, group]);
@@ -51,5 +51,4 @@ function Dropdown() {
     </React.Fragment>
   );
 }
-
 export default Dropdown;

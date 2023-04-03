@@ -1,6 +1,7 @@
 import { Box, MenuItem, Select, SvgIcon } from "@mui/material";
 import React, { useState } from "react";
 import i18next from "i18next";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { ReactComponent as Britishicon } from "../assets/Images/Language_select/united-kingdom-flag-icon.svg";
 import { ReactComponent as SpainIcon } from "../assets/Images/Language_select/spain-flag-icon.svg";
 import { ReactComponent as KoreanIcon } from "../assets/Images/Language_select/south_korea.svg";
@@ -19,6 +20,7 @@ function LanguageDropdown() {
         value={language}
         onChange={handleChange}
         displayEmpty
+        IconComponent={KeyboardArrowDownIcon}
         sx={{
           "& .MuiOutlinedInput-notchedOutline": {
             border: { xs: "none", sm: "1px solid #eeeaee" },
