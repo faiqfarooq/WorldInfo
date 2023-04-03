@@ -21,7 +21,7 @@ function App() {
     []
   );
 
-  const theme = React.useMemo(
+  const theme = useMemo(
     () =>
       createTheme({
         breakpoints: {

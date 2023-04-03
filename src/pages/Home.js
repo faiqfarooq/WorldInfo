@@ -154,8 +154,8 @@ function Home() {
           isLoading={isLoading}
           isError={isError}
         />
+        <ScrollToTop smooth top={100} component={<NorthIcon />} />
       </Container>
-      <ScrollToTop smooth top={100} component={<NorthIcon />} />
     </React.Fragment>
   );
 }
