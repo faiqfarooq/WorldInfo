@@ -5,6 +5,7 @@
   "Searchforacountry": "국가 검색",
   "Filterbyregions": "지역별로 필터링",
   "Back": "뒤쪽에",
+  "NotExists":"존재하지 않음",
   "NotFound":"데이터를 찾을 수 없음",
   "CustomCard": {
     "Population": "인구",

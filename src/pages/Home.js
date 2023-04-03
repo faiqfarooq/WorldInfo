@@ -19,6 +19,7 @@ import IsLoadingComp from "../components/IsLoadingComp";
 import Dropdown from "../components/home/Dropdown";
 import NorthIcon from "@mui/icons-material/North";
 import ScrollToTop from "react-scroll-to-top";
+import NotExistsComp from "../components/NotExistsComp";
 
 const CustomBox = styled(Box)`
   display: flex;
@@ -47,7 +48,6 @@ const CustomBoxForlanguageDD = styled(Box)`
     align-items: flex-start;
   }
 `;
-
 function Home() {
   const dispatch = useDispatch();
   const { t } = useTranslation();
@@ -60,8 +60,9 @@ function Home() {
     item.name.toLowerCase().includes(search)
   );
   // here wew receive the input value to serach the country
-  const handleSearchChange = (event) => {
-    setSearch(event.target.value.toLowerCase());
+  const handleSearchChange = async (event) => {
+    const value = event.target.value.toLowerCase().replace(/[^a-z]/gi, "");
+    setSearch(value);
   };
   // this code run only once to get data of all countries
   useEffect(() => {
@@ -69,7 +70,6 @@ function Home() {
       dispatch(getCountryAsync({ group: "all" }));
     }
   }, [countries]);
-
   return (
     <React.Fragment>
       <Container
@@ -105,6 +105,7 @@ function Home() {
                 sx={{ ml: 1, flex: 1 }}
                 placeholder={t("Searchforacountry")}
                 inputProps={{ "aria-label": "Search for a country" }}
+                value={search}
                 onChange={handleSearchChange}
               />
               <IconButton
@@ -149,11 +150,16 @@ function Home() {
         {isError && <IsErrorComp />}
         {isLoading && <IsLoadingComp />}
         {/* Map method of the all countries code  */}
-        <AllCountriesMapmethod
-          filteredCountries={filteredCountries}
-          isLoading={isLoading}
-          isError={isError}
-        />
+        {filteredCountries.length > 0 ? (
+          <AllCountriesMapmethod
+            filteredCountries={filteredCountries}
+            isLoading={isLoading}
+            isError={isError}
+          />
+        ) : (
+          <NotExistsComp />
+        )}
+
         <ScrollToTop smooth top={100} component={<NorthIcon />} />
       </Container>
     </React.Fragment>
