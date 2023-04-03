@@ -53,12 +53,13 @@ function DetailedCountryPage() {
         <Button
           onClick={() => navigate(-1)}
           sx={{
-            boxShadow: "1px 1px 10px 1px rgba(0,0,0,.13)",
+            boxShadow: "1px 1px 10px 1px rgba(0,0,0,.13) ",
             color: "text.primary",
             textTransform: "none",
+            padding: "0.5rem 1.2rem",
           }}
         >
-          <KeyboardBackspaceIcon sx={{ mr: "1rem" }} />
+          <KeyboardBackspaceIcon sx={{ mr: ".5rem" }} />
           {t("Back")}
         </Button>
         {/* Back button code ends */}
@@ -134,7 +135,10 @@ function DetailedCountryPage() {
                       >
                         <Button
                           sx={{
-                            boxShadow: "1px 1px 10px 1px rgba(0,0,0,.13)",
+                            boxShadow: (theme) =>
+                              theme.palette.mode === "dark"
+                                ? "0px 0px 5px 1px rgba(255,255,255,.1) "
+                                : "1px 1px 10px 1px rgba(0,0,0,.13)  ",
                             margin: ".5rem 0.2rem",
                             color: "text.primary",
                             padding: "0.2rem 1.4rem",

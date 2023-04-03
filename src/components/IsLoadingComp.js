@@ -12,7 +12,7 @@ function IsLoadingComp() {
         justifyContent="center"
         alignItems="center"
       >
-        <CircularProgress />
+        <CircularProgress sx={{color:"text.primary"}} />
       </Box>
     </React.Fragment>
   );
