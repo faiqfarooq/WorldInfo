@@ -1,5 +1,5 @@
 import { createTheme, ThemeProvider } from "@mui/material";
-import React, { createContext, Suspense, useMemo, useState } from "react";
+import React, { createContext, useMemo, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer";
@@ -82,5 +82,4 @@ function App() {
     </ColorModeContext.Provider>
   );
 }
-
 export default App;

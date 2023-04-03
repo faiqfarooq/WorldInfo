@@ -17,8 +17,8 @@ function CustomCard(props) {
       {/* This is the card whicjhj will be shown on the home page */}
       <Card
         sx={{
-          minWidth: { xs: "16rem", sm: "19rem" },
-          maxWidth: { xs: "19rem", sm: "19rem" },
+          minWidth: { xs: "17rem", sm: "19rem" },
+          maxWidth: { xs: "17rem", sm: "19rem" },
           minHeight: "25rem",
           my: "2rem",
           px: "auto",
