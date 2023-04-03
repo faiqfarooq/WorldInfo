@@ -14,6 +14,7 @@ import { ReactComponent as sunIcon } from "../assets/Images/mood change/sun-svgr
 import { ReactComponent as moonIcon } from "../assets/Images/mood change/moon-svgrepo-com.svg";
 import LanguageDropdown from "./LanguageDropdown";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const { t } = useTranslation();
@@ -30,15 +31,18 @@ export default function Navbar() {
             px: { xs: "1rem", sm: "2rem" },
           }}
         >
-          <Typography
-            color="text.primary"
-            sx={{
-              fontSize: { md: "1.5rem", sm: "1.3rem", xs: "0.9rem" },
-              fontWeight: 800,
-            }}
-          >
-            {t("Whereintheworld")}
-          </Typography>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <Typography
+              color="text.primary"
+              sx={{
+                fontSize: { md: "1.5rem", sm: "1.3rem", xs: "0.9rem" },
+                fontWeight: 800,
+              }}
+            >
+              {t("Whereintheworld")}
+            </Typography>
+          </Link>
+
           <Box display="flex" alignItems="center">
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               <LanguageDropdown />

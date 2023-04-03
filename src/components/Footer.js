@@ -6,8 +6,8 @@ function Footer() {
     <React.Fragment>
       <Container disableGutters maxWidth="xl">
         <Divider />
-        <Box  py="1rem">
-          <Typography textAlign="center" >&#169; Faiq Farooq 2023</Typography>
+        <Box py="1rem">
+          <Typography textAlign="center">&#169; Faiq Farooq 2023</Typography>
         </Box>
       </Container>
     </React.Fragment>

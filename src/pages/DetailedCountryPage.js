@@ -1,7 +1,7 @@
 import { Box, Button, Container, CssBaseline, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   singleCountryborders,
   singleCountryDetails,
@@ -20,6 +20,7 @@ function DetailedCountryPage() {
   const countryBorder = useSelector(countriesBorder);
   const borders = useSelector(singleCountryborders);
   const isLoading = useSelector(loading);
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const params = useParams();
   const { details } = params;
@@ -37,40 +38,43 @@ function DetailedCountryPage() {
       testFunc();
     }
   }, [borders]);
-
   return (
     <React.Fragment>
       <CssBaseline />
       <Container
         disableGutters
         maxWidth="xl"
-        sx={{ px: { xs: "1rem", sm: "2rem", md: "3rem" }, py: {xs:"1.8rem",sm:"3rem"} }}
+        sx={{
+          px: { xs: "1rem", sm: "2rem", md: "3rem" },
+          py: { xs: "1.8rem", sm: "3rem" },
+        }}
       >
         {/* Back button code starts */}
-        <Link to="/" style={{ textDecoration: "none" }}>
-          <Button
-            sx={{
-              boxShadow: "1px 1px 10px 1px rgba(0,0,0,.13)",
-              color: "text.primary",
-              textTransform: "none",
-            }}
-          >
-            <KeyboardBackspaceIcon sx={{ mr: "1rem" }} />
-            {t("Back")}
-          </Button>
-        </Link>
+        <Button
+          onClick={() => navigate(-1)}
+          sx={{
+            boxShadow: "1px 1px 10px 1px rgba(0,0,0,.13)",
+            color: "text.primary",
+            textTransform: "none",
+          }}
+        >
+          <KeyboardBackspaceIcon sx={{ mr: "1rem" }} />
+          {t("Back")}
+        </Button>
         {/* Back button code ends */}
         {isLoading && <IsLoadingComp />}
         {/* Single country details page code starts */}
         {!isLoading && (
           <Box
             display="flex"
-          
             pb="2rem"
-            sx={{ flexDirection: { md: "row", xs: "column" },  pt:{xs:"3rem",sm:"4rem",md:"5rem"} }}
+            sx={{
+              flexDirection: { md: "row", xs: "column" },
+              pt: { xs: "3rem", sm: "4rem", md: "5rem" },
+            }}
           >
             {/* Image box contain the image */}
-            
+
             <Box
               sx={{
                 flex: "0 0 45%",
@@ -84,23 +88,24 @@ function DetailedCountryPage() {
                 alignItems: "center",
               }}
             >
-          
               <Box
-                  component="img"
-                  alt={name}
-                  loading="lazy"
-                  src={`${flag}`}
-                  sx={{
-                    height: { xs: "auto", sm: "25rem", md: "25rem" },
-                    width: "100%",
-                    objectFit:{xs:'cover',sm:"cover"}
-                  }}
-                />       
-              
+                component="img"
+                alt={name}
+                loading="lazy"
+                src={`${flag}`}
+                sx={{
+                  height: { xs: "auto", sm: "25rem", md: "25rem" },
+                  width: "100%",
+                  objectFit: { xs: "cover", sm: "cover" },
+                }}
+              />
             </Box>
             {/* Box contain the details of single country  */}
             <Box sx={{ flex: "0 0 55%" }}>
-              <Typography variant="h3" sx={{ pt: "2.5rem",pl:{xs:'0',sm:'0',md:'4.5rem'} }}>
+              <Typography
+                variant="h3"
+                sx={{ pt: "2.5rem", pl: { xs: "0", sm: "0", md: "4.5rem" } }}
+              >
                 {name}
               </Typography>
               {/* code of the all details of single country (name,currencies etc.) is in the Layout component */}
@@ -111,8 +116,8 @@ function DetailedCountryPage() {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "flex-end",
-                  pt: {xs:"2rem",sm:"4rem"},
-                  pl:{xs:'0',sm:'0',md:'4.5rem'}
+                  pt: { xs: "2rem", sm: "4rem" },
+                  pl: { xs: "0", sm: "0", md: "4.5rem" },
                 }}
               >
                 <Typography variant="body1">

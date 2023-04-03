@@ -47,7 +47,6 @@ function Home() {
   const isLoading = useSelector(loading);
   const isError = useSelector(error);
   const [search, setSearch] = useState("");
-
   // serach the country by this code with the help of search bar
   const filteredCountries = countries.filter((item) =>
     item.name.toLowerCase().includes(search)

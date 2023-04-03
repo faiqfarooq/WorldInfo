@@ -27,10 +27,11 @@ function Layout() {
           flexDirection: { xs: "column", sm: "row" },
           pl: { xs: "0", sm: "0", md: "4.5rem" },
           pt: { xs: "1rem", sm: "2rem" },
+          overflow: "hidden",
         }}
       >
-        <Box sx={{ flex: "0 0 65%" }}>
-          <Box display="flex">
+        <Box sx={{ flex: "0 0 62%" }}>
+          <Box display="flex" flexWrap="wrap">
             {/* we are using the i18next library to change the language thats why it look differnt */}
             <Typography variant="body1" mr="0.3rem">
               {t("CountryDetails.NativeName")}:{" "}
@@ -39,7 +40,7 @@ function Layout() {
               {nativeName}
             </Typography>
           </Box>
-          <Box display="flex" py="0.2rem">
+          <Box display="flex" py="0.2rem" flexWrap="wrap">
             <Typography variant="body1" mr="0.3rem">
               {t("CountryDetails.Population")}:{" "}
             </Typography>
@@ -48,7 +49,7 @@ function Layout() {
               {addCommonsTothePopulation(population)}
             </Typography>
           </Box>
-          <Box display="flex">
+          <Box display="flex" flexWrap="wrap">
             <Typography variant="body1" mr="0.3rem">
               {t("CountryDetails.Region")}:{" "}
             </Typography>
@@ -56,7 +57,7 @@ function Layout() {
               {region}
             </Typography>
           </Box>
-          <Box display="flex" py="0.2rem">
+          <Box display="flex" py="0.2rem" flexWrap="wrap">
             <Typography variant="body1" mr="0.3rem">
               {t("CountryDetails.SubRegion")}:{" "}
             </Typography>
@@ -64,7 +65,7 @@ function Layout() {
               {subregion}
             </Typography>
           </Box>
-          <Box display="flex">
+          <Box display="flex" flexWrap="wrap">
             <Typography variant="body1" mr="0.3rem">
               {t("CountryDetails.Capital")}:{" "}
             </Typography>
@@ -73,8 +74,11 @@ function Layout() {
             </Typography>
           </Box>
         </Box>
-        <Box sx={{ flex: "0 0 35%", pt: { xs: "1.8rem", sm: "0" } }}>
-          <Box display="flex" alignItems="center">
+        <Box
+          width="100%"
+          sx={{ flex: "0 0 38%", pt: { xs: "1.8rem", sm: "0" } }}
+        >
+          <Box display="flex" alignItems="center" flexWrap="wrap">
             <Typography variant="body1" mr="0.3rem">
               {t("CountryDetails.TopLevelDomain")}:{" "}
             </Typography>
@@ -84,7 +88,7 @@ function Layout() {
               </Typography>
             ))}
           </Box>
-          <Box display="flex" alignItems="center" py="0.2rem">
+          <Box display="flex" alignItems="center" flexWrap="wrap" py="0.2rem">
             <Typography variant="body1" mr="0.3rem">
               {t("CountryDetails.Currencies")}:{" "}
             </Typography>
@@ -94,7 +98,7 @@ function Layout() {
               </Typography>
             ))}
           </Box>
-          <Box display="flex" alignItems="center">
+          <Box display="flex" alignItems="center" flexWrap="wrap">
             <Typography variant="body1" mr="0.3rem">
               {t("CountryDetails.Languages")}:{" "}
             </Typography>
