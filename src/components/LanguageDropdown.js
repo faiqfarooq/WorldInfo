@@ -21,7 +21,7 @@ function LanguageDropdown() {
         displayEmpty
         sx={{
           "& .MuiOutlinedInput-notchedOutline": {
-            border: "1px solid #eeeaee",
+            border: { xs: "none", sm: "1px solid #eeeaee" },
           },
           "& .MuiOutlinedInput-input": {
             padding: { xs: "0.7rem 0.4rem", sm: ".5rem  .4rem" },

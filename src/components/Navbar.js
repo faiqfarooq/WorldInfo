@@ -45,7 +45,7 @@ export default function Navbar() {
             </Box>
             {/* this button is changing the mode, onClick we are traggering the color mode via useContext   */}
             <Button
-              sx={{ ml: 1, border: "1px solid #eeeaee" }}
+              sx={{ ml: 1, border: { xs: "none", sm: "1px solid #eeeaee" } }}
               onClick={colorMode.toggleColorMode}
               color="inherit"
             >
