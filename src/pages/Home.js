@@ -1,10 +1,4 @@
-import {
-  Container,
-  IconButton,
-  InputBase,
-  Paper,
-  styled,
-} from "@mui/material";
+import { Container, IconButton, InputBase, Paper, styled } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
@@ -24,6 +18,7 @@ const CustomBox = styled(Box)`
   justify-content: space-between;
   padding-top: 3rem;
   @media (max-width: 684px) {
+    padding-top: 1.5rem;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
