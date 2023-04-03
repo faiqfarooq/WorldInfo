@@ -1,5 +1,4 @@
-import { Container, IconButton, InputBase, Paper, styled } from "@mui/material";
-import { Box } from "@mui/system";
+import { Container, IconButton, InputBase, Paper, styled,Box } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import LanguageDropdown from "../components/LanguageDropdown";
@@ -11,6 +10,8 @@ import AllCountriesMapmethod from "../components/home/AllCountriesMapmethod";
 import IsErrorComp from "../components/IsErrorComp";
 import IsLoadingComp from "../components/IsLoadingComp";
 import Dropdown from "../components/home/Dropdown";
+import NorthIcon from '@mui/icons-material/North';
+import ScrollToTop from "react-scroll-to-top";
 
 const CustomBox = styled(Box)`
   display: flex;
@@ -147,6 +148,7 @@ function Home() {
           isError={isError}
         />
       </Container>
+      <ScrollToTop smooth top={100} component={<NorthIcon />} />
     </React.Fragment>
   );
 }

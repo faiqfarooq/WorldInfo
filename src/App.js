@@ -6,8 +6,6 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Nopage from "./pages/Nopage";
-import NorthIcon from '@mui/icons-material/North';
-import ScrollToTop from "react-scroll-to-top";
 import DetailedCountryPage from "./pages/DetailedCountryPage";
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
@@ -48,7 +46,7 @@ function App() {
             fontSize: ".95rem",
             fontWeight: 500,
           },
-          fontFamily:'Nunito Sans'
+          fontFamily: "Nunito Sans",
         },
         palette: {
           mode,
@@ -71,21 +69,15 @@ function App() {
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
-        <Suspense fallback="loading">
-          <BrowserRouter>
-            <Navbar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route
-                path="/country/:details"
-                element={<DetailedCountryPage />}
-              />
-              <Route path="/*" element={<Nopage />} />
-            </Routes>
-            <ScrollToTop smooth top={100} component={<NorthIcon />} />
-            <Footer />
-          </BrowserRouter>
-        </Suspense>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/country/:details" element={<DetailedCountryPage />} />
+            <Route path="/*" element={<Nopage />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
       </ThemeProvider>
     </ColorModeContext.Provider>
   );
