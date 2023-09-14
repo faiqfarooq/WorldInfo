@@ -8,6 +8,8 @@ function Footer() {
         <Divider />
         <Box py="1rem">
           <Typography textAlign="center">&#169; Faiq Farooq 2023</Typography>
+    <a href="https://github.com/faiqfarooq">GitHub</a>
+    
         </Box>
       </Container>
     </React.Fragment>
